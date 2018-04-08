@@ -1,0 +1,8 @@
+LINK : warning L4021: no stack segment
+
+ Start  Stop   Length Name                   Class
+ 00000H 0007BH 0007CH DATA                   
+ 00080H 00080H 00000H STACK                  
+ 00080H 0013AH 000BBH CODE                   
+
+Program entry point at 0008:0000
