@@ -1,0 +1,1224 @@
+
+
+
+
+
+
+
+
+
+                             EdIt! (tm) version 1.2
+
+
+
+
+
+
+
+
+                                       by
+
+                                SRT Enterprises
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                www.srtware.com
+
+
+
+
+
+
+
+             This text and program are Copyright (C) 1993-94, 2001
+                               by SRT Enterprises
+                         All Rights Reserved Worldwide
+                   "EdIt!" is a trademark of SRT Enterprises
+
+          EdIt! v1.2                                            Page i
+          ------------------------------------------------------------
+
+                              Table of Contents
+
+          Table Of Contents...................................... i
+          Disclaimer & License Agreement........................ ii
+          Distribution Information............................. iii
+          Definition of Shareware.............................. iii
+
+          Installation & Quick Start............................. 1
+
+          Product Description.................................... 1
+          Why Should I Register?................................. 2
+          Ordering Information  ................................. 2
+
+          Configuration File..................................... 3
+
+          Command Line Operation................................. 3
+               Command Line Options.............................. 3
+               Command Line Parsing.............................. 4
+
+          Editing A File......................................... 5
+               Key Bindings...................................... 5
+               Selecting Text.................................... 6
+
+          Menus And Dialog Boxes................................. 6
+               Overview.......................................... 6
+               File Menu......................................... 7
+               Edit Menu......................................... 9
+               Search Menu....................................... 9
+               Format Menu...................................... 10
+               Window Menu...................................... 11
+               Tools Menu....................................... 12
+               EdIt! Menu....................................... 14
+               Help Menu........................................ 14
+
+          Technical Notes & Troubleshooting..................... 15
+               Long File Names.................................. 15
+               Can't Use Mouse In Command Prompt Window......... 15
+               TSRs............................................. 15
+
+          How To Contact The Author............................. 16
+
+          Special Credits....................................... 16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          EdIt! v1.2                                           Page ii
+          ------------------------------------------------------------
+
+            NOTE:  USE OF THIS SOFTWARE CONSTITUTES ACCEPTANCE OF
+                   THE FOLLOWING DISCLAIMER & LICENSE AGREEMENT !
+
+          DISCLAIMER
+          ==========
+            Users of EdIt! must accept this disclaimer of warranty:
+
+               EdIt! IS SUPPLIED 'AS IS.'  SRT ENTERPRISES (AUTHOR)
+          DISCLAIMS ALL WARRANTIES, EXPRESSED OR IMPLIED, INCLUDING,
+          WITHOUT LIMITATION, THE WARRANTIES OF MERCHANTABILITY AND
+          OF FITNESS FOR ANY PURPOSE.  THE AUTHOR ASSUMES NO
+          LIABILITY FOR ANY DAMAGES WHATSOEVER (INCLUDING, WITHOUT
+          LIMITATION, DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR
+          OTHER DAMAGES) FOR ANY REASON WHICH MAY RESULT FROM THE USE
+          OF OR INABILITY TO USE EdIt!.  ALL RISKS ARE ASSUMED BY THE
+          USERS OF THIS SOFTWARE.
+
+
+          LICENSE AGREEMENT
+          =================
+               Read the following terms and conditions carefully.
+          Use of this product constitutes your acceptance of these
+          terms and conditions and your agreement to follow them.
+
+               SRT ENTERPRISES (AUTHOR) GRANTS YOU, THE END USER, A
+          NONEXCLUSIVE PERSONAL LICENSE TO USE THIS SOFTWARE FOR A
+          PERIOD UP TO 30 DAYS IN ORDER TO EVALUATE ITS SUITABILITY
+          TO YOUR NEEDS.  AFTER THE EVALUATION PERIOD YOU MUST EITHER
+          REGISTER WITH THE AUTHOR OR CEASE USING THE SOFTWARE.  YOU
+          MAY USE THE SOFTWARE ON A SINGLE PERSONAL COMPUTER SYSTEM
+          AND MAKE AS MANY COPIES AS NEEDED FOR BACKUP AND ARCHIVAL.
+          YOU MAY ALSO DISTRIBUTE THE SOFTWARE, UNMODIFIED AND IN ITS
+          ENTIRETY, TO OTHERS WHO ARE INTERESTED IN EVALUATING THE
+          SOFTWARE AS PER THE FOLLOWING DISTRIBUTION LICENSE.  YOU
+          MAY NOT MODIFY, ALTER, TRANSLATE, DISASSEMBLE, DECOMPILE,
+          OR LEASE THE SOFTWARE OR THIS MANUAL.  THIS LICENSE IS
+          EFFECTIVE UNTIL TERMINATED.  YOU MAY TERMINATE IT AT ANY
+          TIME BY DESTROYING THE SOFTWARE.  IT WILL ALSO TERMINATE IF
+          YOU FAIL TO COMPLY WITH ANY TERM OR CONDITION OF THIS
+          AGREEMENT.  YOU AGREE UPON SUCH TERMINATION TO DESTROY THE
+          SOFTWARE.  THIS AGREEMENT SHALL BE GOVERNED BY THE LAWS OF
+          THE STATE OF ILLINOIS.
+
+               EdIt! is a "Shareware" program (see note below) and is
+          provided at no charge to the user for evaluation.  Feel
+          free to share this evaluation copy with your friends, but
+          you may not give it away altered or as part of another
+          program.  The essence of "user-supported" software is to
+          provide personal computer users with quality software
+          without high prices, and yet provide incentive for
+          programmers to continue to develop new products.
+
+               If you find this program useful and find that you are
+          using EdIt! and continue to use EdIt! after a 30-day trial
+          period, you must register with the author.
+
+          EdIt! v1.2                                          Page iii
+          ------------------------------------------------------------
+
+               The $19.95 registration fee will license one copy for
+          use on any one computer at any one time.  You must treat
+          this software just like a book, e.g., this software may be
+          used by any number of people and may be freely moved from
+          one computer location to another, so long as there is NO
+          POSSIBILITY of it being used at one location while it is
+          being used at another, just as a book cannot be read by two
+          different persons at the same time.  Information on site
+          licensing and distribution licenses are available in the
+          Ordering Information section on page 2.
+
+               You are encouraged to pass an evaluation copy of
+          EdIt! along to your friends for evaluation.  Please
+          encourage them to register their copy if they find that
+          they continue to use it.  All registered users will receive
+          a key for the latest 1.x version of EdIt!, along with the
+          other registration benefits outlined on page 2.
+
+
+
+          DISTRIBUTION LICENSE AND INFORMATION
+          ====================================
+               You are hereby granted a limited license to freely
+          distribute the evaluation version of EdIt!, subject to the
+          following terms and conditions.  Any other use,
+          distribution or representation of EdIt! is expressly
+          forbidden without the express written consent of the author.
+
+            (1) EdIt!, its documentation, and accompanying files may
+                not be altered under any circumstances, and must be
+                distributed as a complete unit.  Please contact
+                the author for information on obtaining a complete
+                copy of the latest version for evaluation and
+                distribution if yours is incomplete or has been
+                modified.
+
+            (2) Under no circumstances must the purchaser or receiver
+                of the software be given the impression that he/she
+                is buying or receiving a license to use the software
+                itself, but merely an evaluation copy.
+
+            (3) Any disputes concerning this software shall be
+                resolved subject to the applicable laws of the United
+                States of America and the State of Illinois.
+
+            (4) Failure to abide by these provisions constitutes
+                violation of U.S. federal copyright laws, and will be
+                prosecuted to the maximum extent possible.
+
+
+
+          DEFINITION OF SHAREWARE
+          =======================
+               First, let's consider what Shareware is not.
+          Shareware is NOT "free" or "public domain" software, it is
+
+          EdIt! v1.2                                           Page iv
+          ------------------------------------------------------------
+
+          a type of distribution method designed to lower costs for
+          everyone involved.  Any fee that you may have paid to
+          obtain this or any Shareware program from a disk vendor,
+          computer bulletin board service, user group, or retailer
+          was to cover their cost of getting the program to you.
+          Shareware is paid for by registering with the author.
+
+               Shareware distribution gives users a chance to try
+          software before buying it.  If you try a Shareware program
+          and continue using it, you are expected to register.
+          Individual programs differ on details -- some request
+          registration while others require it; some specify a
+          maximum trial period.  With registration, you get anything
+          from the simple right to continue using the software to an
+          updated program with printed manual.
+
+               Copyright laws apply to both Shareware and commercial
+          software, and the copyright holder retains all rights, with
+          a few specific exceptions as stated below.  Shareware
+          authors are accomplished programmers, just like commercial
+          authors, and the programs are of comparable quality (in
+          both cases there are good programs and bad ones!).  The
+          main difference is in the method of distribution.  The
+          author specifically grants the right to copy and distribute
+          the software, either to all and sundry or to a specific
+          group.  For example, some authors require written
+          permission before a commercial disk vendor may copy their
+          Shareware.
+
+               Again, Shareware is a distribution method, not a type
+          of software.  You should find software that suits your
+          needs and pocketbook, whether it is commercial or
+          Shareware.  The Shareware system makes fitting your needs
+          easier, because you can try the software *before* you buy.
+          And because the overhead is low, prices are low also.
+          Shareware has the ultimate money-back guarantee:  if you
+          don't use the product, you don't pay for it.  Without
+          product registrations, however, programmers receive no
+          compensation for their work and thereby are not encouraged
+          to continue developing software.  They have trusted you by
+          providing a full-featured product, and they expect you to
+          reciprocate that trust.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          EdIt! v1.2                                            Page 1
+          ------------------------------------------------------------
+
+          INSTALLATION & QUICK START
+          ==========================
+               Please see the ED-READ.ME file for a list of exactly
+          which files should be included in this archive.  If it is
+          missing, your copy of EdIt! is incomplete or has been
+          altered.
+
+               EdIt! requires no installation, but you may want to
+          copy all the files included in this archive to a directory
+          that is on your PATH (type PATH at the DOS prompt to
+          display your PATH.  This way, EdIt! can be run from any
+          directory or disk drive.  That's it!  If you want to put
+          EdIt! in another directory, such as C:\UTIL, run EdIt! and
+          select the EdIt!|System Files menu item.  In your
+          AUTOEXEC.BAT file, find the line that starts "SET PATH=..."
+          and add ";C:\UTIL" to the end.  Then reboot your PC.
+
+               For those of you who prefer a "quickie" approach to
+          new software, type ED /? at the DOS prompt for a one-page
+          command summary, or ED to jump right into the program.  It
+          is my hope that EdIt! is easy enough to learn without
+          reading this manual.
+
+
+          JUST WHAT IS EdIt!, ANYWAY?
+          ===========================
+               EdIt! is a small, fast replacement for the editor from
+          DOS 5.0 and later (and the infamous EDLIN from earlier DOS
+          versions!) with the following features and benefits (and
+          many more):
+
+             * Potentially save hours updating files across LANs
+             * Microsoft and LANtastic network support (NET USE,
+               LNET, LNET_MGR)
+             * Open multiple files and groups of files, with support
+               for wildcards
+             * Windowed interface (written in Borland's Turbo Vision)
+             * Mouse support
+             * Small size -- 135k total! (approx. 1/3 that of DOS's
+               EDIT & QBASIC combination, 1/4 the size of Boxer 5.0,
+               and 1/10 the size of VED 3.31!)
+             * Fast; written in Turbo Pascal and assembler, not BASIC
+             * Does not require QBASIC.EXE to run, as does DOS's EDIT
+             * Wordwrap
+             * Paragraph and document reformatting
+             * Variable right margin & tab stop settings
+             * Autoindent mode
+             * Shell to DOS using as little as 240 bytes of memory
+             * 28- and 43/50-line video mode support
+             * Convert from and to Unix and Macintosh text formats
+             * Text can be centered
+             * Jump to specific line numbers and "preset" locations
+             * Undo
+             * Search & replace
+             * Clipboard (cut, copy and paste)
+
+          EdIt! v1.2                                            Page 2
+          ------------------------------------------------------------
+
+          WHY SHOULD I REGISTER?
+          ======================
+               There are several registration incentives.  First and
+          foremost, you will know that you are doing the right (and
+          legal!) thing by paying for the software you use.
+          Registration also encourages authors to continue writing
+          software!  When you register, you will also receive:
+
+               * A registration key for the latest 1.x version
+               * A discount on future versions (half price or less)
+               * No "reminder" screens
+               * Notification of the release of new versions
+               * When upgrading, newer versions of EdIt! will read
+                 older EDIT!.CFG files.
+
+               I would like to ask that if you decide not to register
+          and discontinue using EdIt!, please send me a postcard or
+          e-mail letting me know why, so that I may implement your
+          suggestions in future versions.
+
+
+
+          ORDERING INFORMATION
+          ====================
+               To order EdIt! using your credit card, please visit
+          our web site:
+
+          www.srtware.com/EdIt/
+
+               Pricing for EdIt! 1.2 is as follows.  All prices are
+          in U.S. Dollars.
+
+                Number of Users          Price Per Copy
+                ---------------          --------------
+                Single user                $ 19.95
+                Site license                199.00
+                Distribution license        299.00
+
+               A Site license allows an unlimited number of users for
+          one company or organization.  A Distribution license allows
+          EdIt! to be included as part of another software program.
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          EdIt! v1.2                                            Page 3
+          ------------------------------------------------------------
+
+          CONFIGURATION FILE
+          ==================
+               Upon startup, EdIt! will search for its EDIT!.CFG
+          file.  EdIt! looks first for an environment variable called
+          EDIT! to point it to the proper directory (SET EDIT!=C:\).
+          This is done to facilitate multiple configurations--on a
+          network, for example.  If the EDIT! variable is not found,
+          EdIt! looks in the the current directory, then the
+          directory where EDIT!.EXE is located, then in order through the
+          user's PATH statement.  If no config file is found, EdIt!
+          will still run, but revert to its default configuration
+          (the same as the first time you ran EdIt!).  Similarly, if
+          a corrupted EDIT!.CFG (or one created by a different
+          version of EdIt!) is found, EdIt! will display its
+          pathname, warn the user to remove it, and revert to its
+          default configuration.  EDIT!.CFG will be saved in the
+          directory given by the EDIT! environment variable if none
+          is found.
+
+
+
+          COMMAND LINE OPERATION
+          ======================
+
+          Command Line Options
+          --------------------
+               There are nine command line options, or switches, for
+          EdIt!, which may be used in any order and may be either
+          upper or lower case.  The only exception is the one to
+          display the help screen, "/?", which must be placed first
+          (as in "ED -?").  Options must be prefixed with a "-" or
+          "/", with a space between options.  The rest of the options
+          are:
+
+            /S:  On startup, opens \AUTOEXEC.BAT and \CONFIG.SYS in
+                 the root directory of the default drive (the default
+                 is the current drive, unless specified otherwise
+                 using the /D option, below).
+
+               (Typing a backslash ("\") before any file or directory
+               name as indicated above indicates that the pathname
+               begins in the root directory of the drive; i.e.,
+               \UTIL\ED.EXE is the same as C:\UTIL\ED.EXE, assuming
+               you are on drive C:)
+
+            /W:  On startup, opens \AUTOEXEC.BAT, \CONFIG.SYS,
+                 \[Your_Windows_Dir]\WIN.INI and
+                 \[Your_Windows_Dir]\SYSTEM.INI.  EdIt! reads its
+                 EDIT!.CFG file upon startup to learn what you have
+                 set as your Windows directory (in EdIt!, select
+                 Tools|Configuration... to set this directory).
+
+
+
+
+
+          EdIt! v1.2                                            Page 4
+          ------------------------------------------------------------
+
+          /[#]:  On startup, opens the four files specified in the
+                 specified file group (#1, #2, #3, or #4).  In EdIt!,
+                 select Tools|Configuration... to set these
+                 filenames (see Tools|Configuration, below, for more
+                 information).
+
+           /Dd:  Changes the default drive to drive "d".  The default
+                 drive is the current drive unless otherwise specified
+                 by this option.  This is true both for the above
+                 command line options and for their equivalents in the
+                 program (see the EdIt! menu).  EdIt! attempts to make
+                 sure your choice of drives is valid by accessing the
+                 NUL file in the root directory.  With this option,
+                 users can set each drive letter to a different
+                 server, for example, to easily update files across a
+                 network with the file groups discussed above.
+
+            /V:  Starts EdIt! in 43/50-line mode, if available on
+                 the user's computer.
+
+            /M:  Starts EdIt! in Monochrome/grayscale mode, instead
+                 of color mode.  Useful when the user has a grayscale
+                 monitor and a color video adapter.
+
+
+          Command Line Parsing
+          --------------------
+               Upon startup, EdIt! first checks to see if the first
+          command line option (if present) is "/?".  If so, it
+          displays the help screen and quits.
+
+               If not, the program checks to see if a default drive
+          was specified using the "/Dd" option, and validates it (see
+          Command Line Options).  If two or more "/D"s are specified
+          on one line, EdIt! will end up using the last one to set
+          the default drive.  At this time, EdIt! also checks for the
+          "/V" option on the command line.
+
+               Next, EdIt! will process the command line in order
+          from left to right, opening any valid filenames found
+          and/or processing any command line options.  Remember,
+          wildcards are perfectly OK!  EdIt! will not open any
+          executable files (EXE/COM/DLL/OVL) or archive files
+          (ZIP/ARJ/ARC/PAK/ZOO/LZH), as they (along with any binary
+          file) will probably be corrupted if modified and Saved by
+          EdIt!.  This is also to allow better use of wildcards in a
+          directory with these files.
+
+               Finally, EdIt! will cascade all open windows on the
+          desktop for easy selection.  Note that after eighteen
+          windows are open there is no more space in which to cascade
+          them; in this event, the remaining windows are opened full
+          screen (memory permitting, of course).
+
+
+
+          EdIt! v1.2                                            Page 5
+          ------------------------------------------------------------
+
+          EDITING A FILE
+          ==============
+
+          Key Bindings
+          ------------
+               In general, there are two "rules" to EdIt!'s hotkeys.
+          First, there are at least two keys for almost everything.
+          Second, if you know of a hotkey combination, try it--it
+          probably works (if it doesn't, let me know about it...if
+          enough people ask, I will change it in future versions).
+
+                I have tried to make the key choices as logical as
+          possible, and every menu option has its hotkey displayed.
+          Keys are bound to some of the traditional WordStar key
+          bindings, although a few changes had to be made (the block
+          and cut/copy/paste commands come to mind).  Below is a list
+          of the key bindings in EdIt!:
+
+          Control +  Command            Control-K +  Command
+          ---------  ---------          -----------  ---------
+             A       Set tab stops          #        Set place marker
+             B       Reformat paragraph     B        Start select
+             C       Copy                   C        Paste
+             D       Reformat document      D        Save
+             E       Center text            F        SaveAs
+             F       Find                   H        Hide selection
+             G       Find again             K        Copy
+             H       Backspace              S        Save
+             I       Toggle autoindent      T        Select word
+             L       Jump to line numbe     Y        Cut
+             M       Set right margin       X        Save & close file
+             N       Insert line
+             P       Insert page break  Control-J +  Command
+             R       Replace            -----------  ---------
+             T       Delete word            #        Jump to marker
+             U       Undo
+             V       Paste              Control-S +  Command
+             W       Toggle wordwrap    -----------  ---------
+             X       Cut                    #        Set place marker
+             Y       Delete line
+             Z       Undo               Control-Q +  Command
+             Left    Left one word      -----------  ---------
+             Right   Right one word         #        Jump to marker
+             Home    Top of page            A        Replace
+             End     Bottom of page         C        End of document
+             PgUp    Start of document      D        End of line
+             PgDn    End of document        F        Find
+             BkSpace Delete to line start   H        Del to line start
+             Delete  Clear                  I        Toggle AutoIndent
+             F4      Close file             L        Undo
+                                            R        Start of document
+            Alt +    Command                S        Start of line
+          ---------  ---------              U        Reformat document
+             F4      Exit                   Y        Del to line end
+
+
+          EdIt! v1.2                                            Page 6
+          ------------------------------------------------------------
+
+          Selecting Text
+          --------------
+               The selection can be started by holding down the shift
+          key with any of the cursor movement commands, or via the
+          mouse.  For those of you familiar with WordStar's block
+          commands, they are simulated by copying the information to
+          and from the clipboard.  For example, ^K^B will begin
+          selecting text.  ^K^K will copy the text to the clipboard.
+          ^K^C will paste the contents from the clipboard to the
+          editor.  This simulates, quite closely, the keystrokes to
+          do the same thing using WordStar bindings.  If text is
+          inserted into the editor, either through a key press or
+          pasting from the clipboard, the contents of the selection
+          are replaced by the inserted text.  If there is no
+          selection, the text is inserted at the cursor position.
+
+
+
+          MENUS AND DIALOG BOXES
+          ======================
+
+          Overview
+          --------
+               The menu bar, as well as elements in dialog boxes, may
+          be selected quickly by simultaneously pressing ALT and the
+          highlighted letter of the menu you wish to use.  Menu
+          choices may be selected by pressing the highlighted letter
+          or by using the arrow keys.  Those menu choices that have
+          hot keys have them listed (in general, those hot keys
+          having to do with file or global/system operations use the
+          ALT key, while text and formatting hot keys use the CTRL
+          key).  The F10 key will also activate the menu bar.
+
+               In EdIt!'s dialog boxes, the default button is
+          highlighted, and will be pressed upon hitting Enter in the
+          dialog.  In most cases, the default is the OK button.  As
+          is true throughout EdIt!, highlighted text in dialog boxes
+          will be replaced upon typing.  Pressing Escape will always
+          clear and cancel the dialog box.  The presence of an arrow
+          next to an input line indicates a history list for that
+          line, which can be accessed by pressing it with the mouse
+          or pressing the down arrow.  The history list stores the
+          previous entries for that line during the current execution
+          of EdIt! (it is not stored between sessions).
+
+               For consistency, all references to menus in this
+          document will be made using vertical bars, e.g., File|Open
+          indicates the Open choice under the File menu.
+
+
+
+
+
+
+
+
+          EdIt! v1.2                                            Page 7
+          ------------------------------------------------------------
+
+          FILE MENU:
+
+          File|Open
+          ---------
+               This dialog may be opened by the ALT-O hot key, the
+          menu choice, or the "Alt-O:Open" option on the status line
+          using the mouse.  The directory list will display all files
+          in the directory using the "*.*" mask.  This mask may be
+          changed temporarily by changing the "Name" line in the
+          dialog and pressing Enter.  The default button is the OK
+          button, and the lower portion of the dialog displays the
+          current directory and file information for the highlighted
+          file.  The Open Wildcard button will open files matching a
+          wildcard in the Name field.  You may switch drives by
+          typing the drive letter (or drive and pathname, if you
+          wish) in the "Name" field.  Note that any files to be
+          opened must be less than 65520 bytes in size.
+
+               After TABbing to the "Files" pane, typing the first
+          letters of a filename in lower case will "speed search" to
+          that file.  Upper case speed searches to directory names.
+          The BackSpace key will search for the first filename
+          matching the remaining letters.
+
+
+          File|Save
+          ---------
+               Saves the file in the active window.
+
+
+          File|Save As...
+          ---------------
+               Works just like the File|Open dialog, above.
+
+
+          File|Save All
+          -------------
+               Saves all open files.
+
+
+          File|Close
+          ----------
+               Closes the file in the active window, prompting the
+          user to save any changes.  This item may be chosen by the
+          ALT-C hot key, the menu choice, or the "Alt-C:Close" option
+          on the status line using the mouse.
+
+
+          File|Close All
+          --------------
+               Closes all open files.
+
+
+
+
+
+          EdIt! v1.2                                            Page 8
+          ------------------------------------------------------------
+
+          File|Change Dir...
+          ------------------
+               This dialog changes the current directory used for
+          opening and saving files, to avoid having to repeatedly
+          change directories in the File|Open and File|Save As
+          dialogs.  While this dialog's buttons may not be
+          immediately obvious, it will be easier to understand once
+          you know what each button/element does.  The "Directory
+          Name" input line allows the user to type in the directory.
+          The "Directory Tree" allows the user to manually select the
+          desired directory using the mouse or keyboard; "Drives"
+          displays a list of available drives.  The "Chdir" button
+          changes to the highlighted directory, while the "OK" button
+          confirms that choice and exits the dialog (double-clicking
+          the mouse in the Directory Tree has the same effect as the
+          "Chdir" button).  "Revert" changes the "Directory Tree"
+          back to the way it was when the dialog was first opened.
+
+
+          File|Print
+          ----------
+               This dialog prints either the whole file or a
+          highlighted section to the selected port.  An error will
+          occur if an attempt is made to print to a port that does
+          not exist; however port redirection should be no problem.
+          If the printer does not respond, Turbo Vision generates an
+          internal error marked by a red band across the bottom of
+          the screen.  If this occurs, press "Enter" to continue, or
+          "Esc" to exit.  Note that EdIt! does not format the output
+          in any way, merely sending the ASCII text to the printer
+          directly.  There is an option to send a form feed after
+          printing, which is the default.
+
+
+          File|DOS Shell
+          --------------
+               This choice will shell to DOS using whichever command
+          processor is present on your COMSPEC environment variable
+          (if you don't know what this is, don't worry about it).  If
+          you start getting out-of-memory errors when running
+          programs this may be an indication you have shelled to DOS
+          from within another program.  4DOS users also note that
+          4DOS initally requires more memory (on the order of 80-90
+          KB free) to shell to DOS than does COMMAND.COM.  With
+          version 1.2, EdIt! will now occupy 240 bytes of memory or
+          less when shelling to DOS, if it can save itself into XMS,
+          EMS, or to disk.
+
+
+          File|Exit
+          ----------
+               Closes all windows, prompting to save changes, then
+          exits the program.  This command may be executed via the
+          ALT-X hot key, the menu choice, or the "Alt-X:Exit" option
+          on the status line using the mouse.
+
+          EdIt! v1.2                                            Page 9
+          ------------------------------------------------------------
+
+          EDIT MENU:
+
+          Edit|Undo
+          ---------
+               "Undo" will only undo all operations done between
+          cursor movements, so as soon as the cursor moves (by the
+          cursor keys, etc.), the edits performed are considered
+          "accepted" and all undo information is lost.  Note that
+          this feature cannot undo wordwrap-related operations.
+
+
+          Edit|Cut / Copy / Paste / Clear
+          -------------------------------
+               EdIt! uses both the DOS/Windows 3.0 standard of
+          SHIFT-DELETE, CTRL-INSERT, and SHIFT-INSERT as well as the
+          Windows 3.1/Macintosh standard of CTRL-X, CTRL-C, and
+          CTRL-V for the Cut, Copy, and Paste hot keys,
+          respectively.  The easiest way to think of Edit|Clear is as
+          "delete," or "cutting without copying to the clipboard."
+
+
+          Edit|Show Clipboard
+          -------------------
+               The clipboard contains the last block of text cut or
+          copied to it.  This choice is present in case the user
+          wishes to paste only part of what was Cut or Copied, or
+          wishes to recover text previously Cut out of the file.
+          Remember that the text in the clipboard must be highlighted
+          before you can Paste into your file.
+
+
+          SEARCH MENU:
+
+          Search|Find / Replace / Find Again
+          ----------------------------------
+               The "Find" and "Replace" dialog boxes will search for
+          (and replace) a text string, starting at the beginning of
+          the document or from the current cursor position.  "Find
+          Again" will continue searching for last searched-for string
+          from the current cursor position.  To execute a
+          search-and-delete leave the "New Text" input line blank,
+          and found text will in effect be replaced with nothing.
+
+
+          Search|Set Jump Marker / Jump To Marker
+          ---------------------------------------
+               These commands allow the user to invisibly select 10
+          "preset" locations or place markers within a document, then
+          later Jump To them.  This feature provides an easy way to
+          jump back and forth between sections of a document.
+
+
+
+
+
+
+          EdIt! v1.2                                           Page 10
+          ------------------------------------------------------------
+
+          FORMAT MENU:
+
+          Format|Toggle WordWrap
+          ----------------------
+               Toggles the wordwrap feature for the active window on
+          and off.  The default is off; its status is indicated by a
+          "W" in the lower left-hand corner.  The wordwrap feature
+          depends on the current location of the cursor, meaning that
+          while typing the "wrap" takes place when the cursor reaches
+          the right margin.
+
+
+          Format|Toggle AutoIndent
+          ------------------------
+              Toggles the autoindent feature for the active window on
+          and off.  The default is off; its status is indicated by an
+          "I" in the lower left-hand corner.  When in AutoIndent
+          mode, paragraph reformatting will end at the first blank
+          line (see Format|Reformat Paragraph, below).
+
+
+          Format|Center Text
+          ------------------
+               Centers the current line with respect to the document's
+          current right margin setting.  Wordwrap does not have to be
+          on.
+
+
+          Format|Insert Page Break
+          ------------------------
+               Inserts a page break (form feed) control character (an
+          ASCII #12 decimal, #0C hex) at the current cursor location.
+          This will not print, but will send a form feed to the
+          printer.
+
+
+          Format|Set Tab Stops
+          --------------------
+               Brings up the tab settings dialog.  The x's indicate
+          the location of the stops, i.e., the first stop is in
+          column six, so from the left margin upon hitting TAB the
+          cursor moves five spaces and stops in column six.  To move
+          the tab stop locations, just change the location of the
+          x's.
+
+
+          Format|Set Right Margin
+          -----------------------
+               Allows the user to define the right margin for the
+          active window, which is used for the wordwrap, centering,
+          and reformatting features.  The default right margin is 76.
+
+
+
+
+
+          EdIt! v1.2                                           Page 11
+          ------------------------------------------------------------
+
+          Format|Reformat Paragraph
+          -------------------------
+               Reformats the current paragraph to fit to the right
+          margin, starting from the line the cursor is on.  The
+          "current paragraph" is considered to end at the first line
+          beginning with a tab or space character, or the first blank
+          line.  Note that it is easy to indent blocks of text by
+          indenting the first line and turning on the AutoIndent
+          feature before reformatting that paragraph; however, the use
+          of AutoIndent mode automatically causes EdIt! to default to
+          having the "current paragraph" end only at the first blank
+          line.  Reformatting will work even if WordWrap is off at the
+          time.  It will not work, however, if the first word on the
+          line is beyond the right margin.
+
+
+          Format|Reformat Document
+          ------------------------
+               Reformats the document paragraph by paragraph as
+          above, optionally starting from the current line.
+
+
+          Format|Convert
+          --------------
+               Allows the user to convert between text file formats.
+          DOS uses a CRLF (carriage return & line feed) to indicate an
+          end-of-line.  Unix uses only LF, while the Macintosh system
+          uses only CR.  While the DOS/Unix conversion is rather
+          obvious (the "Unix format" file will appear all on one
+          line), the "Macintosh format" will appear not to change the
+          file.  However if you save the file you will note the file
+          size changes since all the LF characters have been removed.
+
+
+          WINDOW MENU:
+
+          Window|Size/Move
+          ----------------
+               Allows the user to move the active window via the
+          arrow keys, and also allows resizing of the window by
+          holding down SHIFT and using the arrow, HOME, END, PageUp,
+          and PageDown keys.  Press Enter to "drop" the window.
+
+
+          Window|Zoom
+          -----------
+               Toggles the active window between full screen and the
+          current size, or whatever size at which the window was
+          originally opened.
+
+
+
+
+
+
+
+          EdIt! v1.2                                           Page 12
+          ------------------------------------------------------------
+
+          Window|Tile
+          -----------
+               Tiles all open windows, allowing as much as possible
+          of each window to show, i.e., if four windows are open,
+          each would receive a fourth of the screen.  After 12 or so
+          windows are open, some begin to overlap due to the minimum
+          window size requirements.
+
+
+          Window|Cascade
+          --------------
+               Stacks the windows, allowing the title bar and left
+          border of each to be seen.  The active window at the time
+          of the cascade is placed on top.
+
+
+          Window|Next / Previous
+          ----------------------
+               Switches to the next/previous window.
+
+
+          Window|Close / Close All
+          ------------------------
+               See "File|Close" and "File|Close All".
+
+
+          TOOLS MENU
+
+          Tools|Toggle 28-Line Video
+          -----------------------------
+               Toggles between 25-line and 28-line video mode for
+          VGA displays.  Has no effect on other displays.
+
+
+          Tools|Toggle 43/50-Line Video
+          -----------------------------
+               Toggles between 25-line and 43/50-line video mode for
+          EGA and VGA displays.  Has no effect on other displays.
+
+
+          Tools|Toggle Monochrome Video
+          -----------------------------
+               Toggles between color and monochrome/grayscale video
+          mode.  Useful if the user has a grayscale monitor and color
+          video card.
+
+
+          Tools|Configuration
+          -------------------
+               This dialog allows the user to choose which files will
+          be used as Group files, as well as the path in which EdIt!
+          should find the WIN.INI and SYSTEM.INI files.  You can use
+          these groupings to open up to four files at once.  It is OK
+          to specify drive letters and wildcards in the input lines,
+          and filenames from each group may be left blank.  The groups
+
+          EdIt! v1.2                                           Page 13
+          ------------------------------------------------------------
+
+          each have some files already in order to provide an
+          example.
+
+               The "Right Margin" setting controls the default setting
+          that EdIt! will use for its right margin when opening or
+          creating files.
+
+               The "Make Backup Files on Save" option makes a backup
+          of the file being saved if a previous version exists on
+          disk already, adding .BAK as the file extension.
+
+               "Save Desktop File On Exit" optionally saves the file
+          EDIT!.DSK first in the directory given by the EDIT!
+          environment variable, or the current directory if none
+          exists.  EdIt! always reloads its desktop.  The desktop
+          file consists of all open files, their positions, and the
+          video mode.
+
+               "Wordwrap On" and "AutoIndent On" control the default
+          settings EdIt! will use when opening or creating files.
+
+               The configuration file, whose pathname is in the
+          dialog's title, is saved when the user presses the OK
+          button or any of the Group buttons.
+
+
+          Tools|Default Drive
+          -------------------
+               Allows the user to select a default drive for the
+          commands in the EdIt! menu (see "Command Line Options
+          (/Dd)").  Additionally, the user has the option of
+          assigning a drive letter to a network resource.  EdIt! will
+          automatically try the LANtastic and Microsoft commands to
+          disconnect and reconnect the selected drive letter.
+
+          Network pathnames take the form: "\\[server]\[resource]",
+          as in "\\SERVER1\PUBLIC".  Note that the LNET.EXE file,
+          usually found in the \LANTASTI\WIN95 directory, must be in
+          your PATH statement in order to use the LNET USE command.
+
+
+          Tools|Run Net...
+          ----------------
+               Runs the LANtastic program LNET.EXE.  EdIt! assumes it
+          is in a directory on the user's PATH.
+
+
+          Tools|Run Net Manager...
+          ------------------------
+               Runs the LANtastic program LNET_MGR.EXE.  EdIt! assumes
+          it is in a directory on the user's PATH.
+
+
+
+
+
+          EdIt! v1.2                                           Page 14
+          ------------------------------------------------------------
+
+          EdIt! MENU:
+
+          EdIt!|System Files / Windows Files / File Group [#]
+          ---------------------------------------------------
+               Works the same as the "/S," "/W," and "/[#]" command
+          line options, respectively (see "Command Line Options").
+
+
+          HELP MENU:
+
+          Help|About
+          ----------
+               Displays version, copyright, serial number, and
+          registration information, as well as the number of days this
+          evaluation copy of EdIt! has been in use.
+
+
+          Help|Open EDIT!.TXT
+          -------------------
+               Opens EDIT!.TXT if it is located in the directory
+          given by the EDIT! environment variable, the current
+          directory, or the same directory as either the ED.EXE file
+          or the EDIT!.CFG file.
+
+
+          Help|Registration Info...
+          -------------------------
+               Displays a dialog containing a short description of
+          shareware along with an option to open this EDIT!.TXT file,
+          as in Help|Open EDIT!.TXT.
+
+
+          Help|Enter Registration Key
+          ---------------------------
+               Displays a dialog so the user can enter his/her
+          registration information and "unlock" EdIt!.  Values must be
+          entered exactly as they were provided to the user.
+
+
+          Help|Print Registration Form...
+          -------------------------------
+               Opens a dialog to print the registration form for
+          EdIt!, which is formatted just like this document (59 lines
+          per page, 60 characters wide plus a 10 character margin).
+
+
+
+
+
+
+
+
+
+
+
+
+          EdIt! v1.2                                           Page 15
+          ------------------------------------------------------------
+
+          Technical Notes/Troubleshooting
+          ===============================
+
+          Long File Names
+          ---------------
+               As a DOS program, EdIt! will only see short file names
+          under Windows 95/98/Me and NT/2000/XP.  On NTFS drives the
+          files are actually stored with a long name format (on
+          FAT/FAT32 drives they are not) so no short name appears in a
+          DIR listing.  However you can still open files with long
+          names from the command line using wildcards (ED long*.txt).
+
+
+          Can't Use Mouse In Command Prompt Window
+          ----------------------------------------
+               Some versions of Windows, such as Windows 2000 Pro,
+          default to having "QuickEdit Mode" enabled in a command
+          prompt window.  Windows 98 SE has this option but it is
+          disabled by default.  With this enabled, when the user
+          clicks on a menu option in EdIt! Windows starts selecting
+          text.  You can disable this temporarily by clicking the
+          window's command menu (or ALT+Spacebar), and selecting
+          Properties, Options tab, and unchecking QuickEdit Mode.
+          Windows 98 has this option on the Misc tab.  Make the
+          setting permanent by changing the setting in the Properties
+          of the icon for the command prompt.
+
+
+          TSRs
+          ----
+               EdIt! should work with most TSRs, although there are
+          bound to be a few exceptions.  One appears to be a file
+          named CALC.COM dated 6-1-88 at 12:00, a resident
+          calculator.  This TSR causes the machine to hang when
+          popped up over EdIt!.  Some TSRs may "trap" certain keys
+          and prevent them from working, such as Close-Up v4.01's
+          Customer program.  PCs with Norton's SmartCan TSR may beep
+          twice when running EdIt!, usually when first loading or
+          printing.  This is SmartCan beeping, I am told, to indicate
+          a problem deleting a file.  Since EdIt! does not delete any
+          files during these operations, I do not have a solution. If
+          you find any other conflicts, please contact Support.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          EdIt! v1.2                                           Page 16
+          ------------------------------------------------------------
+
+
+          HOW TO CONTACT THE AUTHOR
+          =========================
+
+          E-MAIL:  sales@srtware.com
+                   support@srtware.com
+
+          WEB:     www.srtware.com/EdIt/
+
+          MAIL:    Steve Yates
+                   SRT Enterprises
+                   2S782 Timber Drive
+                   Warrenville, IL  60555-2728
+
+
+
+          SPECIAL CREDITS
+          ===============
+               SRT Enterprises would like to thank the following
+          people for their contributions:
+
+          Al Andersen, Alec Bergamini, Ed Jordan, Teddy Matsumoto
+
+          This product uses the SPAWNO routines by Ralf Brown
+          to minimize memory use while shelling to DOS and
+          running other programs.
+
+          Also, thank you (the users) for all your suggestions
+          and support!
+
+
+
+
+                           Thank you for using EdIt!
+
+
+
+
+
+                               -End of Document-
