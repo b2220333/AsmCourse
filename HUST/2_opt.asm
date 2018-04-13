@@ -68,31 +68,28 @@ STRING_EXIT:
     pop di
 endm
 
-__calvalue macro
-    mov ax, 12[di]
-    imul ax, 16[di]
-    mov bx, 10[di]
-    imul bx, 14[di]
+__calvalue macro s
+    mov ax, 12[s]
+    imul ax, 16[s]
+    mov bx, 10[s]
+    imul bx, 14[s]
     sub ax, bx
     imul ax, 100
     cwd
     idiv bx
-    mov 18[di], ax
+    mov 18[s], ax
 endm
 
-__calvalueplus macro
-    __calvalue
-    mov PR1, ax
-    add di, N * 20
-    __calvalue
-    sub di, N * 20
-    mov PR2, ax
-    add ax, PR1
-    mov bx, 2
-    cwd
-    idiv bx
+__calvalueplus macro s
+    __calvalue s
+    mov dx, ax
+    add s, N * 20
+    __calvalue s
+    sub s, N * 20
+    add ax, dx
+    sar ax, 1
 
-    mov 18[di], ax
+    mov 18[s], ax
 
 endm
 
@@ -129,8 +126,6 @@ data segment use16
              DW 18, 42, 32, 8, ?
     ITEM_OTHERS_2 DB N - 3 DUP('TEMPVALUE$', 15, 0, 20, 0, 30, 0, 2, 0, ?, ?)
 
-    PR1 DW ?
-    PR2 DW ?
     IN_NAME DB 11
             DB ?
             DB 11 dup(0)
@@ -187,7 +182,7 @@ AUTH_FAIL:
     jmp INPUT_USERNAME
 CAL_DATA:
     __showtime
-    mov cx, 6666
+    mov cx, 6666 / 2
 FEAT_3:
     push cx
     lea di, ITEM_C_1 
@@ -195,13 +190,37 @@ FEAT_3:
     cmp ax, 16[di]
     jbe INPUT_USERNAME 
     inc 16[ITEM_C_1]
+
     lea di, ITEM_A_1
-    mov cx, N
-CAL_VALUE:
-    __calvalueplus
-    add di, 20
+    lea si, ITEM_B_1
+    mov cx, N / 2
+CAL_VALUE_1:
+    __calvalueplus di
+    add di, 40
+    __calvalueplus si
+    add si, 40
+
     dec cx
-    jnz CAL_VALUE
+    jnz CAL_VALUE_1
+
+    lea di, ITEM_C_1 
+     mov ax, 14[di]
+    cmp ax, 16[di]
+    jbe INPUT_USERNAME 
+    inc 16[ITEM_C_1]
+
+    lea di, ITEM_A_1
+    lea si, ITEM_B_1
+    mov cx, N / 2
+CAL_VALUE_2:
+    __calvalueplus di
+    add di, 40
+    __calvalueplus si
+    add si, 40
+
+    dec cx
+    jnz CAL_VALUE_2
+
     pop cx
     dec cx
     jnz FEAT_3
