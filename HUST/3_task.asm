@@ -101,7 +101,7 @@ __calvalueplus macro
     sub di, N * 20
     mov PR2, ax
     add ax, PR1
-    shr ax
+    shr ax, 2
     mov 18[di], ax
 endm
 
@@ -339,6 +339,14 @@ SHOW_ITEM_INFO:
 EDIT_ITEM_INFO:
 
 CAL_AVER_PROFIT:
+    lea di, ITEM_A_1
+    mov cx, 3
+CAL_ITEM_AVER_PROFIT:
+    __calvalueplus 
+    add di, 20
+    dec cx
+    jnz CAL_ITEM_AVER_PROFIT
+    jmp FEAT_3
 
 CAL_PROFIT_RANK:
 
