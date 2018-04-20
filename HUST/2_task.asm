@@ -100,7 +100,7 @@ __showtime macro
     call disptime
 endm
 
-data segment use16
+data segment use16 
     N EQU 30
     CRLF DB 0dh, 0ah, '$'
     NOTE_USER_NAME DB 'Please input username:$'
