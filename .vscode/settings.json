@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.asm": "asm",
+        "*.ass": "yaml",
+        "bitset": "c",
+        "stdio.h": "c",
+        "__locale": "c",
+        "ios": "c",
+        "typeinfo": "c"
+    }
+}
