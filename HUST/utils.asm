@@ -60,6 +60,7 @@ endm
 __cmps macro src, dst
     local STRING_NOT_EQUAL, STRING_EXIT
     push di
+    push cx
     __strlen src
     mov ax, cx
     __strlen dst
@@ -74,6 +75,7 @@ __cmps macro src, dst
 STRING_NOT_EQUAL:
     mov bx, -1
 STRING_EXIT:
+    pop cx
     pop di
 endm
 
@@ -82,6 +84,8 @@ __calvalue macro
     mov ax, 12[di]
     imul ax, 16[di]
     mov bx, 10[di]
+    dec bx
+    sar bx, 1
     imul bx, 14[di]
     sub ax, bx
     imul ax, 100
@@ -179,6 +183,16 @@ __outputnum macro s
     pop ax
 endm
 
+__outputsnum macro s
+    push ax
+    mov ax, [s]
+    dec ax
+    sar ax, 1
+    __itoa TEMP_OUT
+    __output TEMP_OUT 
+    pop ax
+endm
+    
 
 __showitemsingle macro
     __outputreg di 
@@ -228,4 +242,27 @@ __showitem macro
     __putc ','
     add di, N * 20
     __showitemsingle
-endm    
+endm   
+
+__unencrypt macro s
+    local EXIT    
+    mov al, s
+    xor al, 'v'
+    mov s, al
+    mov al, s + 1
+    xor al, 'i'
+    mov s + 1, al
+    mov al, s + 2
+    xor al, 's'
+    mov s + 2, al
+    mov al, s + 3
+    xor al, 'e'
+    mov s + 3, al
+    mov al, s + 4
+    xor al, 'a'
+    mov s + 4, al
+    mov al, s + 5
+    xor al, 't'
+    mov s + 5, al
+EXIT:
+endm
